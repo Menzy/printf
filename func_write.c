@@ -2,18 +2,18 @@
 
 /**
  * handle_char - Prints a string
- * @c: char types.
+ * @c: character types
  * @buffer: Buffer array to handle print
  * @flags: Calculates active flags.
  * @width: get width.
  * @precision: precision specifier
  * @size: Size specifier
  *
- * Return: Number of chars printed.
+ * Return: Number of characters printed.
  */
 int handle_char(char c, char buffer[],
 		int flags, int width, int precision, int size)
-{ /* char is stored at left and paddind at buffer's right */
+{
 	int i = 0;
 	char padd = ' ';
 
@@ -46,14 +46,14 @@ int handle_char(char c, char buffer[],
 /**
  * handle_number - Prints a string
  * @is_negative: Lista of arguments
- * @ind: char types.
+ * @ind: character types.
  * @buffer: Buffer array to handle print
  * @flags: Calculates active flags
  * @width: get width.
  * @precision: precision specifier
  * @size: Size specifier
  *
- * Return: Number of chars printed.
+ * Return: Number of characters printed.
  */
 int handle_number(int is_negative, int ind, char buffer[],
 		int flags, int width, int precision, int size)
@@ -82,10 +82,10 @@ int handle_number(int is_negative, int ind, char buffer[],
  * @width: width
  * @prec: Precision specifier
  * @length: Number length
- * @padd: Pading char
- * @extra_c: Extra char
+ * @padd: Pading character
+ * @extra_c: Extra character
  *
- * Return: Number of printed chars.
+ * Return: Number of printed characters.
  */
 int handle_num(int ind, char buffer[],
 		int flags, int width, int prec,
@@ -143,7 +143,7 @@ int handle_num(int ind, char buffer[],
  * @precision: Precision specifier
  * @size: Size specifier
  *
- * Return: Number of written chars.
+ * Return: Number of written characters.
  */
 int handle_unsgnd(int is_negative, int ind,
 		char buffer[],
@@ -198,11 +198,11 @@ int handle_unsgnd(int is_negative, int ind,
  * @length: Length of number
  * @width: Wwidth specifier
  * @flags: Flags specifier
- * @padd: Char representing the padding
- * @extra_c: Char representing extra char
+ * @padd: Character representing the padding
+ * @extra_c: Character representing extra char
  * @padd_start: Index at which padding should start
  *
- * Return: Number of written chars.
+ * Return: Number of written characters.
  */
 int handle_pointer(char buffer[], int ind, int length,
 		int width, int flags, char padd, char extra_c, int padd_start)

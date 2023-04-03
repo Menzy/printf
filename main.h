@@ -17,23 +17,23 @@
 #define F_SPACE 16
 
 /**
- * struct fmt - Struct op
+ * struct Format - Struct to choose function for each specifier
  *
- * @fmt: The format.
- * @fn: The function associated.
+ * @Format: The format.
+ * @ptr: The function associated.
  */
 
-struct fmt
+struct Format
 {
-	char fmt;
-	int (*fn)(va_list, char[], int, int, int, int);
+	char Format;
+	int (*ptr)(va_list, char[], int, int, int, int);
 };
 
 
-typedef struct fmt fmt_t;
+typedef struct Format format_t;
 
 int _printf(const char *format, ...);
-int func_print(const char *fmt, int *i,
+int func_print(const char *format, int *i,
 		va_list list, char buffer[], int flags, int width, int precision, int size);
 
 int print_hexa(va_list types, char map_to[],
